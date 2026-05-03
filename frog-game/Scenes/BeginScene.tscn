@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://bvmm0tsi83jjh"]
+[gd_scene format=3 uid="uid://dmgy0u4myt1my"]
 
-[ext_resource type="Script" uid="uid://cchf1ihg6st5e" path="res://Script/BeginScene.cs" id="1_uwx2u"]
-[ext_resource type="Texture2D" uid="uid://mspktydcl83s" path="res://Assets/BG/begin_bg.png" id="2_b4u6t"]
-[ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="3_8q24l"]
+[ext_resource type="Texture2D" uid="uid://mspktydcl83s" path="res://Assets/BG/begin_bg.png" id="1_ej7sx"]
+[ext_resource type="Script" uid="uid://dk3qcqb0vtguu" path="res://Scripts/BeginScene.cs" id="1_uwx2u"]
+[ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="2_tqaug"]
 [ext_resource type="Texture2D" uid="uid://c1vaji02a2c1p" path="res://Assets/Roles/Ninja Frog/Idle (32x32).png" id="4_b4u6t"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_xhn6u"]
-font = ExtResource("3_8q24l")
-font_size = 60
-font_color = Color(1, 0.65, 0, 1)
-shadow_size = 3
-shadow_color = Color(0, 0, 0, 0.7607843)
+[sub_resource type="LabelSettings" id="LabelSettings_uwx2u"]
+font = ExtResource("2_tqaug")
+font_size = 56
+font_color = Color(1, 0.8000001, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8q24l"]
@@ -95,105 +95,108 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 13.0
+"speed": 15.0
 }]
 
-[node name="BeginScene" type="Node2D" unique_id=2023965442 node_paths=PackedStringArray("btnBegin")]
+[node name="BeginScene" type="Node2D" unique_id=324905765 node_paths=PackedStringArray("btnBegin")]
 script = ExtResource("1_uwx2u")
 btnBegin = NodePath("BeginCanvas/btnBegin")
 
-[node name="ImgBg" type="Sprite2D" parent="." unique_id=1050931672]
-position = Vector2(576.00006, 328)
-scale = Vector2(3.0555556, 3.0555556)
-texture = ExtResource("2_b4u6t")
+[node name="ImgBg" type="Sprite2D" parent="." unique_id=25035080]
+texture_filter = 1
+position = Vector2(577.00006, 324)
+scale = Vector2(3.0648148, 3.0648148)
+texture = ExtResource("1_ej7sx")
+metadata/_edit_lock_ = true
 
-[node name="BeginCanvas" type="CanvasLayer" parent="." unique_id=1066632896]
+[node name="BeginCanvas" type="CanvasLayer" parent="." unique_id=1421533298]
 
-[node name="labTitle" type="Label" parent="BeginCanvas" unique_id=1459327180]
+[node name="labTitle" type="Label" parent="BeginCanvas" unique_id=1208329133]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -221.0
+offset_right = 119.0
+offset_bottom = -146.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "蛙里奥"
+label_settings = SubResource("LabelSettings_uwx2u")
+horizontal_alignment = 1
+
+[node name="btnBegin" type="Button" parent="BeginCanvas" unique_id=865751228]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -88.0
-offset_top = -220.0
-offset_right = 92.0
-offset_bottom = -159.0
+offset_top = -125.0
+offset_right = 88.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "蛙里奥"
-label_settings = SubResource("LabelSettings_xhn6u")
-
-[node name="btnBegin" type="Button" parent="BeginCanvas" unique_id=1932942446]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = -116.0
-offset_right = 64.0
-offset_bottom = -68.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_8q24l")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("2_tqaug")
+theme_override_font_sizes/font_size = 26
 text = "开始"
 
-[node name="btnRanking" type="Button" parent="BeginCanvas" unique_id=1854391064]
+[node name="btnRanking" type="Button" parent="BeginCanvas" unique_id=951412362]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = -44.0
-offset_right = 64.0
-offset_bottom = 4.0
+offset_left = -88.0
+offset_top = -34.0
+offset_right = 88.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_8q24l")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("2_tqaug")
+theme_override_font_sizes/font_size = 26
 text = "排行榜"
 
-[node name="btnSetting" type="Button" parent="BeginCanvas" unique_id=534295838]
+[node name="btnSetting" type="Button" parent="BeginCanvas" unique_id=2132964715]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = 28.0
-offset_right = 64.0
-offset_bottom = 76.0
+offset_left = -88.0
+offset_top = 58.0
+offset_right = 88.0
+offset_bottom = 126.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_8q24l")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("2_tqaug")
+theme_override_font_sizes/font_size = 26
 text = "设置"
 
-[node name="btnQuit" type="Button" parent="BeginCanvas" unique_id=2022027013]
+[node name="btnQuit" type="Button" parent="BeginCanvas" unique_id=1792246656]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = 100.0
-offset_right = 64.0
-offset_bottom = 148.0
+offset_left = -88.0
+offset_top = 150.0
+offset_right = 88.0
+offset_bottom = 218.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_8q24l")
-theme_override_font_sizes/font_size = 20
-text = "退出"
+theme_override_fonts/font = ExtResource("2_tqaug")
+theme_override_font_sizes/font_size = 26
+text = "结束"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1915528787]
-position = Vector2(272, 463.99997)
-rotation = -0.2617994
-scale = Vector2(2.9600003, 2.9600003)
+[node name="Frog" type="AnimatedSprite2D" parent="." unique_id=1494120269]
+position = Vector2(265, 462.99997)
+rotation = -0.40521717
+scale = Vector2(2.875, 2.875)
 sprite_frames = SubResource("SpriteFrames_igfw3")
 autoplay = "default"
-frame_progress = 0.6580987
+frame_progress = 0.93022513
 
-[connection signal="pressed" from="BeginCanvas/btnQuit" to="." method="ClickBtnQuit"]
+[connection signal="pressed" from="BeginCanvas/btnQuit" to="." method="_on_btnQuit_pressed"]

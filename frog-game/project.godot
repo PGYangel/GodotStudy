@@ -10,14 +10,10 @@ config_version=5
 
 [application]
 
-config/name="GithubFrogGame"
-run/main_scene="uid://bvmm0tsi83jjh"
+config/name="FrogGame"
+run/main_scene="uid://dmgy0u4myt1my"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[display]
-
-window/stretch/mode="canvas_items"
 
 [dotnet]
 
