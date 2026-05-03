@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://bvmm0tsi83jjh"]
+
+[ext_resource type="Script" uid="uid://cchf1ihg6st5e" path="res://Script/BeginScene.cs" id="1_uwx2u"]
+[ext_resource type="Texture2D" uid="uid://mspktydcl83s" path="res://Assets/BG/begin_bg.png" id="2_b4u6t"]
+[ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="3_8q24l"]
+[ext_resource type="Texture2D" uid="uid://c1vaji02a2c1p" path="res://Assets/Roles/Ninja Frog/Idle (32x32).png" id="4_b4u6t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xhn6u"]
+font = ExtResource("3_8q24l")
+font_size = 60
+font_color = Color(1, 0.65, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.7607843)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q24l"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rodhy"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r387f"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpwav"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_425vg"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hb7b"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at2eb"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x8gb"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70t3a"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx4wg"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voqj5"]
+atlas = ExtResource("4_b4u6t")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_igfw3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8q24l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rodhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r387f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpwav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_425vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hb7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at2eb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x8gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70t3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx4wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voqj5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
+
+[node name="BeginScene" type="Node2D" unique_id=2023965442 node_paths=PackedStringArray("btnBegin")]
+script = ExtResource("1_uwx2u")
+btnBegin = NodePath("BeginCanvas/btnBegin")
+
+[node name="ImgBg" type="Sprite2D" parent="." unique_id=1050931672]
+position = Vector2(576.00006, 328)
+scale = Vector2(3.0555556, 3.0555556)
+texture = ExtResource("2_b4u6t")
+
+[node name="BeginCanvas" type="CanvasLayer" parent="." unique_id=1066632896]
+
+[node name="labTitle" type="Label" parent="BeginCanvas" unique_id=1459327180]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -220.0
+offset_right = 92.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "蛙里奥"
+label_settings = SubResource("LabelSettings_xhn6u")
+
+[node name="btnBegin" type="Button" parent="BeginCanvas" unique_id=1932942446]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -116.0
+offset_right = 64.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_8q24l")
+theme_override_font_sizes/font_size = 20
+text = "开始"
+
+[node name="btnRanking" type="Button" parent="BeginCanvas" unique_id=1854391064]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -44.0
+offset_right = 64.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_8q24l")
+theme_override_font_sizes/font_size = 20
+text = "排行榜"
+
+[node name="btnSetting" type="Button" parent="BeginCanvas" unique_id=534295838]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = 28.0
+offset_right = 64.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_8q24l")
+theme_override_font_sizes/font_size = 20
+text = "设置"
+
+[node name="btnQuit" type="Button" parent="BeginCanvas" unique_id=2022027013]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = 100.0
+offset_right = 64.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_8q24l")
+theme_override_font_sizes/font_size = 20
+text = "退出"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1915528787]
+position = Vector2(272, 463.99997)
+rotation = -0.2617994
+scale = Vector2(2.9600003, 2.9600003)
+sprite_frames = SubResource("SpriteFrames_igfw3")
+autoplay = "default"
+frame_progress = 0.6580987
+
+[connection signal="pressed" from="BeginCanvas/btnQuit" to="." method="ClickBtnQuit"]
