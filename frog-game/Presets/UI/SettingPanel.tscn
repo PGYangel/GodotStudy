@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://bhlcwqo1ber3o"]
+
+[ext_resource type="Texture2D" uid="uid://bioy1imy5rub8" path="res://Assets/UI/Tiles/Large tiles/Thin outline/tile_0000.png" id="1_7dko6"]
+[ext_resource type="Script" uid="uid://b1axqucaoayl" path="res://Scripts/UI/SettingPanel.cs" id="1_nohh1"]
+[ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="2_hlfjw"]
+[ext_resource type="PackedScene" uid="uid://bfngav711kf4r" path="res://Presets/UI/BtnClose.tscn" id="3_p46md"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p46md"]
+font = ExtResource("2_hlfjw")
+font_color = Color(0, 0, 0, 1)
+
+[node name="SettingPanel" type="Panel" unique_id=1714007536 node_paths=PackedStringArray("btnClose")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nohh1")
+btnClose = NodePath("btnClose")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="NinePatchRect" parent="." unique_id=748266300]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -108.0
+offset_right = 188.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7dko6")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="MusicCheckBox" type="CheckBox" parent="." unique_id=2057173271]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -52.0
+offset_right = -104.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicLabel" type="Label" parent="." unique_id=1659787037]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -48.0
+offset_right = -64.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "音乐"
+label_settings = SubResource("LabelSettings_p46md")
+
+[node name="MusicHSlider" type="HSlider" parent="." unique_id=1190477062]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -48.0
+offset_right = 112.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SoundCheckBox" type="CheckBox" parent="." unique_id=172204851]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 12.0
+offset_right = -104.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SoundLabel" type="Label" parent="." unique_id=390778948]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 16.0
+offset_right = -64.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "音效"
+label_settings = SubResource("LabelSettings_p46md")
+
+[node name="SoundHSlider" type="HSlider" parent="." unique_id=1796818086]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = 16.0
+offset_right = 112.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btnClose" parent="." unique_id=1900560205 instance=ExtResource("3_p46md")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 168.0
+offset_top = -124.0
+offset_right = 208.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2

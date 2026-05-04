@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ba57mu71gw8s1"]
+
+[ext_resource type="Script" uid="uid://l4sdyr6je7dr" path="res://Scripts/UI/UICanvas.cs" id="1_q6hil"]
+[ext_resource type="PackedScene" uid="uid://bhlcwqo1ber3o" path="res://Presets/UI/SettingPanel.tscn" id="1_r5473"]
+
+[node name="UICanvas" type="CanvasLayer" unique_id=1350111049]
+layer = 5
+script = ExtResource("1_q6hil")
+
+[node name="SettingPanel" parent="." unique_id=1714007536 instance=ExtResource("1_r5473")]
+visible = false

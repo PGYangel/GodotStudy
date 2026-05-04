@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dk3qcqb0vtguu" path="res://Scripts/BeginScene.cs" id="1_uwx2u"]
 [ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="2_tqaug"]
 [ext_resource type="Texture2D" uid="uid://c1vaji02a2c1p" path="res://Assets/Roles/Ninja Frog/Idle (32x32).png" id="4_b4u6t"]
+[ext_resource type="Texture2D" uid="uid://uedttc5hgkd7" path="res://Assets/Items/Fruits/Apple.png" id="5_8q24l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uwx2u"]
 font = ExtResource("2_tqaug")
@@ -98,9 +99,138 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="BeginScene" type="Node2D" unique_id=324905765 node_paths=PackedStringArray("btnBegin")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_igfw3"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fvu8"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vggo"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0b8t"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6m8u"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63d6j"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2eb3"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ctuj"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amngk"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un2ur"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3vio"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7lhy"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iooku"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6pnd"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6vq8"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_265h1"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kywoq"]
+atlas = ExtResource("5_8q24l")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jc843"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igfw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fvu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vggo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0b8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6m8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63d6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2eb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ctuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amngk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un2ur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3vio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7lhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iooku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6pnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6vq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_265h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kywoq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
+
+[node name="BeginScene" type="Node2D" unique_id=324905765 node_paths=PackedStringArray("btnBegin", "btnSetting", "btnRanking")]
 script = ExtResource("1_uwx2u")
 btnBegin = NodePath("BeginCanvas/btnBegin")
+btnSetting = NodePath("BeginCanvas/btnSetting")
+btnRanking = NodePath("BeginCanvas/btnRanking")
 
 [node name="ImgBg" type="Sprite2D" parent="." unique_id=25035080]
 texture_filter = 1
@@ -198,5 +328,12 @@ scale = Vector2(2.875, 2.875)
 sprite_frames = SubResource("SpriteFrames_igfw3")
 autoplay = "default"
 frame_progress = 0.93022513
+
+[node name="Apple" type="AnimatedSprite2D" parent="." unique_id=807435436]
+position = Vector2(869, 469)
+rotation = 0.3587168
+scale = Vector2(4.030586, 4.030586)
+sprite_frames = SubResource("SpriteFrames_jc843")
+autoplay = "default"
 
 [connection signal="pressed" from="BeginCanvas/btnQuit" to="." method="_on_btnQuit_pressed"]
