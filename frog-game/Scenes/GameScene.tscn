@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://hu7d8c38iwmc"]
 
 [ext_resource type="Texture2D" uid="uid://dob0uxxtkv8a8" path="res://icon.svg" id="1_2wl7v"]
+[ext_resource type="Script" uid="uid://bhe7flrbrq0kb" path="res://Scripts/GameScene.cs" id="1_4bvgx"]
 
 [node name="GameScene" type="Node2D" unique_id=599464188]
+script = ExtResource("1_4bvgx")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1704567447]
 position = Vector2(241, 172)
 texture = ExtResource("1_2wl7v")
+
+[node name="Button" type="Button" parent="." unique_id=706758930]
+offset_left = 26.0
+offset_top = 18.0
+offset_right = 134.0
+offset_bottom = 70.0
+text = "退出"
+
+[connection signal="pressed" from="Button" to="." method="_on_btnQuit_pressed"]

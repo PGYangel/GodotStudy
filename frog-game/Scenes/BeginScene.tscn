@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="2_tqaug"]
 [ext_resource type="Texture2D" uid="uid://c1vaji02a2c1p" path="res://Assets/Roles/Ninja Frog/Idle (32x32).png" id="4_b4u6t"]
 [ext_resource type="Texture2D" uid="uid://uedttc5hgkd7" path="res://Assets/Items/Fruits/Apple.png" id="5_8q24l"]
+[ext_resource type="AudioStream" uid="uid://dar6e8lg7ph82" path="res://Assets/Sound/hover.wav" id="6_rodhy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uwx2u"]
 font = ExtResource("2_tqaug")
@@ -336,4 +337,8 @@ scale = Vector2(4.030586, 4.030586)
 sprite_frames = SubResource("SpriteFrames_jc843")
 autoplay = "default"
 
+[node name="btnHoverAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1440688681]
+stream = ExtResource("6_rodhy")
+
+[connection signal="mouse_entered" from="BeginCanvas/btnQuit" to="." method="_on_btnHover_MouseEntered"]
 [connection signal="pressed" from="BeginCanvas/btnQuit" to="." method="_on_btnQuit_pressed"]

@@ -23,9 +23,16 @@ public partial class BeginScene : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		// 设置背景音乐
+		AudioManager.Instance.PlayMusic("res://Assets/Music/Begin.mp3");
+
 		btnBegin.Pressed += _on_btnBegin_pressed;
 		btnSetting.Pressed += _on_btnSetting_pressed;
 		btnRanking.Pressed += _on_btnRanking_pressed;
+
+		btnBegin.MouseEntered += _on_btnHover_MouseEntered;
+		btnSetting.MouseEntered += _on_btnHover_MouseEntered;
+		btnRanking.MouseEntered += _on_btnHover_MouseEntered;
 	}
 
 	/// <summary>
@@ -58,6 +65,15 @@ public partial class BeginScene : Node2D
 	public void _on_btnQuit_pressed()
 	{
 		GetTree().Quit();
+	}
+
+	/// <summary>
+	/// 按钮悬停音效
+	/// </summary>
+	public void _on_btnHover_MouseEntered()
+	{
+		AudioStreamPlayer player = GetNode<AudioStreamPlayer>("btnHoverAudioStreamPlayer");
+		AudioManager.Instance.PlaySound(player);
 	}
 
 }

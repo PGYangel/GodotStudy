@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 UICanvas="*uid://ba57mu71gw8s1"
+BgAudioPlayer="*uid://cquuhb4k478r7"
+AudioManager="*uid://chmf4lidgm6xl"
 
 [dotnet]
 
