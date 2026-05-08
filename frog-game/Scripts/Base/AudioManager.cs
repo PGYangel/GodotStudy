@@ -33,6 +33,15 @@ public partial class AudioManager : Node
 
     public override void _Ready()
     {
+        var config = new ConfigFile();
+        var err = config.Load("user://settings.cfg");
+        if (err == Error.Ok)
+        {
+            MusicIsEnabled = (bool)config.GetValue("Audio", "MusicIsEnabled", true);
+            MusicVolume = (float)config.GetValue("Audio", "MusicVolume", 0.5f);
+            SoundIsEnabled = (bool)config.GetValue("Audio", "SoundIsEnabled", true);
+            SoundVolume = (float)config.GetValue("Audio", "SoundVolume", 0.5f);
+        }
         if (Instance == null)
         {
             Instance = this;

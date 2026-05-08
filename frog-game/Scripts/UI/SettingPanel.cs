@@ -48,7 +48,12 @@ public partial class SettingPanel : Panel
 		}
 		else
 		{
-
+			var config = new ConfigFile();
+			config.SetValue("Audio", "MusicIsEnabled", AudioManager.MusicIsEnabled);
+			config.SetValue("Audio", "MusicVolume", AudioManager.MusicVolume);
+			config.SetValue("Audio", "SoundIsEnabled", AudioManager.SoundIsEnabled);
+			config.SetValue("Audio", "SoundVolume", AudioManager.SoundVolume);
+			config.Save("user://settings.cfg");
 		}
 	}
 
