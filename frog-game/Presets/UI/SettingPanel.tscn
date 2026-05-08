@@ -9,7 +9,7 @@
 font = ExtResource("2_hlfjw")
 font_color = Color(0, 0, 0, 1)
 
-[node name="SettingPanel" type="Panel" unique_id=1714007536 node_paths=PackedStringArray("btnClose")]
+[node name="SettingPanel" type="Panel" unique_id=1714007536 node_paths=PackedStringArray("btnClose", "checkMusic", "sliderMusicVolume", "checkSound", "sliderSoundVolume")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,6 +17,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nohh1")
 btnClose = NodePath("btnClose")
+checkMusic = NodePath("MusicCheckBox")
+sliderMusicVolume = NodePath("MusicHSlider")
+checkSound = NodePath("SoundCheckBox")
+sliderSoundVolume = NodePath("SoundHSlider")
 metadata/_edit_lock_ = true
 
 [node name="BG" type="NinePatchRect" parent="." unique_id=748266300]
@@ -52,6 +56,7 @@ offset_right = -104.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
+button_pressed = true
 
 [node name="MusicLabel" type="Label" parent="." unique_id=1659787037]
 layout_mode = 1
@@ -96,6 +101,7 @@ offset_right = -104.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
+button_pressed = true
 
 [node name="SoundLabel" type="Label" parent="." unique_id=390778948]
 layout_mode = 1

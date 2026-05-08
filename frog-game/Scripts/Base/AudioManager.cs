@@ -48,10 +48,31 @@ public partial class AudioManager : Node
     /// <param name="path">音乐资源</param>
     public void PlayMusic(string path)
     {
-        if (!MusicIsEnabled || MusicAudioPlayer == null) return;
+        if (!MusicIsEnabled || MusicAudioPlayer == null)
+        {
+            PauseMusic();
+            return;
+        }
         MusicAudioPlayer.Stream = ResourceLoader.Load<AudioStream>(path);
         MusicAudioPlayer.VolumeDb = Mathf.LinearToDb(MusicVolume);
         MusicAudioPlayer.Play();
+    }
+    /// <summary>
+    /// 更新音乐状态
+    /// </summary>
+    public void UpdateMusic()
+    {
+        if (!MusicIsEnabled || MusicAudioPlayer == null)
+        {
+            PauseMusic();
+            return;
+        }
+        MusicAudioPlayer.VolumeDb = Mathf.LinearToDb(MusicVolume);
+        if (!MusicAudioPlayer.Playing)
+        {
+            MusicAudioPlayer.Play();
+        }
+
     }
     /// <summary>
     /// 暂停音乐
