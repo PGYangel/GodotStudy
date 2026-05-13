@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FrogGame"
-run/main_scene="uid://dmgy0u4myt1my"
+run/main_scene="uid://hu7d8c38iwmc"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
