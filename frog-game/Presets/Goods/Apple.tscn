@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://ds53xy3fb6rn2"]
+
+[ext_resource type="Texture2D" uid="uid://uedttc5hgkd7" path="res://Assets/Items/Fruits/Apple.png" id="1_gr16x"]
+[ext_resource type="Script" uid="uid://cij5crl2e5t42" path="res://Scripts/Goods/Apple.cs" id="1_gs2jp"]
+[ext_resource type="Texture2D" uid="uid://ca3j3xrfjcgmr" path="res://Assets/Items/Fruits/Collected.png" id="2_j48v4"]
+[ext_resource type="AudioStream" uid="uid://bhhkaft843gwd" path="res://Assets/Sound/eat.wav" id="4_j48v4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sodl"]
+size = Vector2(12, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u71d3"]
+atlas = ExtResource("2_j48v4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti76i"]
+atlas = ExtResource("2_j48v4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp4b2"]
+atlas = ExtResource("2_j48v4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpvt8"]
+atlas = ExtResource("2_j48v4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avdd2"]
+atlas = ExtResource("2_j48v4")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt7sf"]
+atlas = ExtResource("2_j48v4")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs2jp"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j48v4"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c52i6"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al16h"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17jb2"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_051bi"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60j2o"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a76ff"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hdvt"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npjvo"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms6t7"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05t8m"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqjt3"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tspes"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw00m"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxe1o"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tnl1"]
+atlas = ExtResource("1_gr16x")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u71d3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u71d3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti76i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp4b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpvt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avdd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt7sf")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Eat",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs2jp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j48v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c52i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_al16h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17jb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_051bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60j2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a76ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hdvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npjvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms6t7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05t8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqjt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tspes")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw00m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxe1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tnl1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Apple" type="Area2D" unique_id=251093273 node_paths=PackedStringArray("animatedSprite", "audioStreamPlayer")]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_gs2jp")
+animatedSprite = NodePath("AnimatedSprite2D")
+audioStreamPlayer = NodePath("AudioStreamPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1584425669]
+position = Vector2(-2.3841854e-07, -0.49999967)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_6sodl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=854512117]
+sprite_frames = SubResource("SpriteFrames_u71d3")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1720648888]
+stream = ExtResource("4_j48v4")

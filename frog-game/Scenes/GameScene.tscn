@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhe7flrbrq0kb" path="res://Scripts/GameScene.cs" id="1_4bvgx"]
 [ext_resource type="Texture2D" uid="uid://b3esp674bup7n" path="res://Assets/TileMap/Terrain (16x16).png" id="2_4bvgx"]
 [ext_resource type="PackedScene" uid="uid://d4tr1b20enro" path="res://Presets/Role/Player.tscn" id="3_3mbwn"]
+[ext_resource type="PackedScene" uid="uid://ds53xy3fb6rn2" path="res://Presets/Goods/Apple.tscn" id="4_jwv4s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mbwn"]
 texture = ExtResource("2_4bvgx")
@@ -177,3 +178,12 @@ tile_set = SubResource("TileSet_jwv4s")
 
 [node name="Player" parent="." unique_id=47220191 instance=ExtResource("3_3mbwn")]
 position = Vector2(79, 475)
+
+[node name="Apple" parent="." unique_id=251093273 instance=ExtResource("4_jwv4s")]
+position = Vector2(416.99997, 189.99998)
+
+[node name="Apple2" parent="." unique_id=1455448289 instance=ExtResource("4_jwv4s")]
+position = Vector2(609, 180.00002)
+
+[node name="Apple3" parent="." unique_id=1259089493 instance=ExtResource("4_jwv4s")]
+position = Vector2(449, 58.00003)
