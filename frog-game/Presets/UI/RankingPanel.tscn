@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://b373jdao2pv3n"]
+
+[ext_resource type="Script" uid="uid://dbalrjv5mxb5e" path="res://Scripts/UI/RankingPanel.cs" id="1_0f6mu"]
+[ext_resource type="Texture2D" uid="uid://bioy1imy5rub8" path="res://Assets/UI/Tiles/Large tiles/Thin outline/tile_0000.png" id="1_cnxfc"]
+[ext_resource type="PackedScene" uid="uid://bfngav711kf4r" path="res://Presets/UI/BtnClose.tscn" id="2_2u4id"]
+[ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="4_klchi"]
+[ext_resource type="PackedScene" uid="uid://bh0bm1vxg3x2f" path="res://Presets/UI/RankRow.tscn" id="5_ef5x8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ef5x8"]
+font = ExtResource("4_klchi")
+font_size = 26
+font_color = Color(0.6627451, 0.47843137, 0.28235295, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_klchi"]
+font_color = Color(1, 0.6375, 0.25, 1)
+
+[node name="RankingPanel" type="Panel" unique_id=846779845 node_paths=PackedStringArray("btnClose", "VBoxRankList")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0f6mu")
+btnClose = NodePath("BG/btnClose")
+VBoxRankList = NodePath("BG/RankPanel/RankScroll/RankList")
+randRow = ExtResource("5_ef5x8")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="NinePatchRect" parent="." unique_id=355807972]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -164.0
+offset_right = 296.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cnxfc")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="btnClose" parent="BG" unique_id=1900560205 instance=ExtResource("2_2u4id")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 24.0
+grow_horizontal = 0
+
+[node name="labTitle" type="Label" parent="BG" unique_id=1038386049]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 39.0
+offset_bottom = 58.0
+grow_horizontal = 2
+text = "排行榜"
+label_settings = SubResource("LabelSettings_ef5x8")
+
+[node name="RankPanel" type="PanelContainer" parent="BG" unique_id=1384783280]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = -88.0
+offset_right = 228.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RankScroll" type="ScrollContainer" parent="BG/RankPanel" unique_id=111096081]
+layout_mode = 2
+
+[node name="RankList" type="VBoxContainer" parent="BG/RankPanel/RankScroll" unique_id=1052203247]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HeaderRow" type="HBoxContainer" parent="BG/RankPanel/RankScroll/RankList" unique_id=1009651040 groups=["RankTitle"]]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Header_Name" type="Label" parent="BG/RankPanel/RankScroll/RankList/HeaderRow" unique_id=1246932059]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "玩家"
+label_settings = SubResource("LabelSettings_klchi")
+horizontal_alignment = 1
+
+[node name="Header_Score" type="Label" parent="BG/RankPanel/RankScroll/RankList/HeaderRow" unique_id=301790043]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "分数"
+label_settings = SubResource("LabelSettings_klchi")
+horizontal_alignment = 1
+
+[node name="Header_Date" type="Label" parent="BG/RankPanel/RankScroll/RankList/HeaderRow" unique_id=1068115619]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "日期"
+label_settings = SubResource("LabelSettings_klchi")
+horizontal_alignment = 1

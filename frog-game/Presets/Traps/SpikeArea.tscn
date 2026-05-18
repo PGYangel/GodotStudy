@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://8pyx0gfnepcm"]
+
+[ext_resource type="Script" uid="uid://c1u3bg8abthrm" path="res://Scripts/Traps/SpikeArea.cs" id="1_6c44n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kilg5"]
+
+[node name="SpikeArea" type="Area2D" unique_id=407016308]
+script = ExtResource("1_6c44n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1595315580]
+shape = SubResource("RectangleShape2D_kilg5")

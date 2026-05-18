@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://e531s3u7xju7"]
+
+[ext_resource type="Script" uid="uid://dsclaw4r2uvc3" path="res://Scripts/UI/EndPanel.cs" id="1_isly8"]
+[ext_resource type="Texture2D" uid="uid://bioy1imy5rub8" path="res://Assets/UI/Tiles/Large tiles/Thin outline/tile_0000.png" id="1_obna6"]
+[ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="2_3wdo1"]
+[ext_resource type="StyleBox" uid="uid://d3fk1yy3iaawm" path="res://Presets/UI/btnClose_style_box_texture.tres" id="4_pfgcn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_isly8"]
+font = ExtResource("2_3wdo1")
+font_size = 26
+font_color = Color(0.6392157, 0.4392157, 0.22745098, 1)
+
+[node name="EndPanel" type="Panel" unique_id=1805913243 node_paths=PackedStringArray("labGrade", "txtName", "btnQuit")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_isly8")
+labGrade = NodePath("BG/labGrade")
+txtName = NodePath("BG/txtName")
+btnQuit = NodePath("BG/btnQuit")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="NinePatchRect" parent="." unique_id=1166474975]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -128.0
+offset_right = 192.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_obna6")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="labTitle" type="Label" parent="BG" unique_id=935123390]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 44.0
+offset_right = 112.0
+offset_bottom = 71.0
+text = "积分："
+label_settings = SubResource("LabelSettings_isly8")
+
+[node name="labGrade" type="Label" parent="BG" unique_id=1759954751]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 44.0
+offset_right = 352.0
+offset_bottom = 71.0
+text = "0"
+label_settings = SubResource("LabelSettings_isly8")
+
+[node name="txtName" type="TextEdit" parent="BG" unique_id=1023064449]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 100.0
+offset_right = 336.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("2_3wdo1")
+theme_override_font_sizes/font_size = 22
+placeholder_text = "请输入名称"
+
+[node name="btnQuit" type="Button" parent="BG" unique_id=2086433877]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 180.0
+offset_right = 288.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("2_3wdo1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("4_pfgcn")
+theme_override_styles/pressed = ExtResource("4_pfgcn")
+theme_override_styles/hover = ExtResource("4_pfgcn")
+disabled = true
+text = "返回标题页"

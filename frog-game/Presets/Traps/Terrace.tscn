@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cjxm7v0wbrx22"]
+
+[ext_resource type="Script" uid="uid://cwfj1qbxwq8pi" path="res://Scripts/Traps/Terrace.cs" id="1_b55b4"]
+[ext_resource type="Texture2D" uid="uid://dlg02wxl1rnie" path="res://Assets/Traps/Falling Platforms/On (32x10).png" id="1_cpaeg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y30xb"]
+size = Vector2(32, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhjei"]
+atlas = ExtResource("1_cpaeg")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vvcf"]
+atlas = ExtResource("1_cpaeg")
+region = Rect2(32, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr6v8"]
+atlas = ExtResource("1_cpaeg")
+region = Rect2(64, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f43ej"]
+atlas = ExtResource("1_cpaeg")
+region = Rect2(96, 0, 32, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rq2r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhjei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vvcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cr6v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f43ej")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Terrace" type="AnimatableBody2D" unique_id=1944799497 node_paths=PackedStringArray("points")]
+scale = Vector2(2, 2)
+script = ExtResource("1_b55b4")
+points = []
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=961057588]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_y30xb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=28301227]
+sprite_frames = SubResource("SpriteFrames_7rq2r")
+autoplay = "default"
+frame_progress = 0.47563842

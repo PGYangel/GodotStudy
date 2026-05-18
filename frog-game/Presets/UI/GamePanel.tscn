@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dcgcreocr7svi"]
+
+[ext_resource type="FontFile" uid="uid://miv2q6fvnorl" path="res://Assets/Font/素材集市酷方体.ttf" id="1_ahgqt"]
+[ext_resource type="Script" uid="uid://bih3g5dh81c2v" path="res://Scripts/UI/GamePanel.cs" id="1_b6w14"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6hil"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b6w14"]
+font = ExtResource("1_ahgqt")
+font_size = 26
+
+[node name="GamePanel" type="Panel" unique_id=1837394941 node_paths=PackedStringArray("labGrade", "btnQuit")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q6hil")
+script = ExtResource("1_b6w14")
+labGrade = NodePath("labGrade")
+btnQuit = NodePath("btnQuit")
+metadata/_edit_lock_ = true
+
+[node name="labTitle" type="Label" parent="." unique_id=710772580]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 89.0
+offset_bottom = 42.0
+text = "积分："
+label_settings = SubResource("LabelSettings_b6w14")
+
+[node name="labGrade" type="Label" parent="." unique_id=663816495]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 13.0
+offset_right = 368.0
+offset_bottom = 42.0
+text = "0"
+label_settings = SubResource("LabelSettings_b6w14")
+
+[node name="btnQuit" type="Button" parent="." unique_id=1805225398]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 13.0
+offset_right = -16.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_ahgqt")
+theme_override_font_sizes/font_size = 22
+text = "退出"

@@ -8,6 +8,8 @@ public partial class GameScene : Node2D
 	{
 		// 设置背景音乐
 		AudioManager.Instance.PlayMusic("res://Assets/Music/Gameing.mp3");
+		DataManage.Instance.ResetData();
+		UICanvas.Instance.VisiblePanel(UICanvas.PanelType.GamePanel, true);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

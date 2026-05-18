@@ -7,7 +7,11 @@ public partial class UICanvas : CanvasLayer
 
 	public enum PanelType
 	{
-		SettingPanel
+		GamePanel,
+		EndPanel,
+		SettingPanel,
+		QuitPanel,
+		RankingPanel
 	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -23,6 +27,14 @@ public partial class UICanvas : CanvasLayer
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+	}
+
+	public void HideAllPanels()
+	{
+		foreach (PanelType panelType in Enum.GetValues(typeof(PanelType)))
+		{
+			VisiblePanel(panelType, false);
+		}
 	}
 
 	public void VisiblePanel(PanelType panelType, bool isVisible)

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://crd4gc8vwdoxd"]
+
+[ext_resource type="Texture2D" uid="uid://bu0pgsecwkv48" path="res://Assets/Traps/Spikes/Idle.png" id="1_kof64"]
+
+[node name="Spike" type="Sprite2D" unique_id=1825204368]
+scale = Vector2(2, 2)
+texture = ExtResource("1_kof64")

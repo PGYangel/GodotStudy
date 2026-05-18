@@ -2,10 +2,27 @@
 
 [ext_resource type="Script" uid="uid://l4sdyr6je7dr" path="res://Scripts/UI/UICanvas.cs" id="1_q6hil"]
 [ext_resource type="PackedScene" uid="uid://bhlcwqo1ber3o" path="res://Presets/UI/SettingPanel.tscn" id="1_r5473"]
+[ext_resource type="PackedScene" uid="uid://dcgcreocr7svi" path="res://Presets/UI/GamePanel.tscn" id="2_xokv8"]
+[ext_resource type="PackedScene" uid="uid://e531s3u7xju7" path="res://Presets/UI/EndPanel.tscn" id="4_f8ux0"]
+[ext_resource type="PackedScene" uid="uid://dkomv638470kb" path="res://Presets/UI/QuitPanel.tscn" id="5_71dv5"]
+[ext_resource type="PackedScene" uid="uid://b373jdao2pv3n" path="res://Presets/UI/RankingPanel.tscn" id="6_u2dhw"]
 
 [node name="UICanvas" type="CanvasLayer" unique_id=1350111049]
+process_mode = 3
 layer = 5
 script = ExtResource("1_q6hil")
 
+[node name="GamePanel" parent="." unique_id=1837394941 instance=ExtResource("2_xokv8")]
+visible = false
+
 [node name="SettingPanel" parent="." unique_id=1714007536 instance=ExtResource("1_r5473")]
+visible = false
+
+[node name="EndPanel" parent="." unique_id=1805913243 instance=ExtResource("4_f8ux0")]
+visible = false
+
+[node name="QuitPanel" parent="." unique_id=782100 instance=ExtResource("5_71dv5")]
+visible = false
+
+[node name="RankingPanel" parent="." unique_id=846779845 instance=ExtResource("6_u2dhw")]
 visible = false

@@ -23,6 +23,7 @@ public partial class BeginScene : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		UICanvas.Instance.HideAllPanels();
 		// 设置背景音乐
 		AudioManager.Instance.PlayMusic("res://Assets/Music/Begin.mp3");
 
@@ -56,7 +57,7 @@ public partial class BeginScene : Node2D
 	/// </summary>
 	public void _on_btnRanking_pressed()
 	{
-
+		UICanvas.Instance.VisiblePanel(UICanvas.PanelType.RankingPanel, true);
 	}
 
 	/// <summary>

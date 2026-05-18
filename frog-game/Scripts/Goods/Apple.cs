@@ -22,9 +22,14 @@ public partial class Apple : Area2D
 	{
 		if (body is Player)
 		{
+			// 只触发一次
 			this.BodyEntered -= onAppleBodyEntered;
+			// 切换动画和播放音效
 			animatedSprite.Play("Eat");
 			AudioManager.Instance.PlaySound(audioStreamPlayer);
+			// 添加分数
+			DataManage.Instance.AddGrade(10);
+
 			animatedSprite.AnimationFinished += () =>
 			{
 				this.QueueFree();
